@@ -7,15 +7,36 @@ body {
   font-size: 2.5rem;
   line-height: 1.35;
   cursor: default;
+  padding: 0;@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Rock+Salt&display=swap");
+* {
+  box-sizing: content-box;
+  user-select: text; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.35;
+  cursor: default;
   padding: 0;
   margin: 0;
-  cursor: default; }
+  cursor: default;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch; }
+
+.scroll {
+  overflow: scroll;
+  height: 100vh; }
 
 header {
   position: relative;
   width: 100%;
   padding: 2.5% 5%;
-  background: lightblue;
+  background: DeepSkyBlue;
   z-index: 100; }
 
 #topbar {
@@ -35,11 +56,11 @@ section h2 {
   font-size: 1.5em;
   font-weight: bold;
   letter-spacing: -.085em;
-  color: red; }
+  color: OrangeRed; }
 
 .intro {
   position: relative;
-  background: lightblue;
+  background: DeepSkyBlue;
   padding-bottom: 10vh; }
 
 .intro h2 {
@@ -49,15 +70,15 @@ section h2 {
 
 #services {
   text-align: center;
-  padding: 15vh 0; }
+  padding: 10vh 0 0vh; }
 
 #services h3 {
   font-family: 'Rock Salt';
-  color: SteelBlue;
+  color: SlateBlue;
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 5vh;
-  color: Chocolate; }
+  display: none; }
 
 h1, h2, h3, h4, h5 {
   margin: 0; }
@@ -66,21 +87,21 @@ h1 {
   font-size: 2em;
   font-family: 'Montserrat';
   font-weight: bold;
+  margin-top: .5em;
   letter-spacing: -.085em;
-  color: RebeccaPurple;
-  line-height: 1.2em; }
-  h1 span {
-    display: block;
-    background-color: RebeccaPurple;
-    color: White;
-    font-size: .25em;
-    letter-spacing: .645em;
-    margin: 0 0 0 .2em;
-    line-height: 0; }
+  color: Tomato;
+  line-height: .25; }
 
-a {
-  color: orange;
-  text-decoration: none; }
+header h2 {
+  display: inline-block;
+  background-color: Tomato;
+  color: lightblue;
+  font-weight: bold;
+  font-size: .325em;
+  padding: 0 0 0 .5em;
+  line-height: 1.2;
+  letter-spacing: 1.25em;
+  margin: 0 0 0 .2em; }
 
 hr {
   display: none; }
@@ -121,9 +142,6 @@ nav {
   display: none;
   transition: transform .5s ease-in-out; }
 
-ol > li > a:checked ~ nav {
-  display: flex; }
-
 input[type="checkbox"]:checked ~ nav {
   display: flex; }
 
@@ -137,56 +155,21 @@ input[type="checkbox"] {
   z-index: 200;
   top: 1.55em;
   right: 5%;
-  height: 22px;
-  width: 22px;
-  transition: .3s;
-  cursor: pointer;
-  transform: scale(3); }
+  font-size: 1.325em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 81px;
+  padding-right: 2px;
+  background: White;
+  border: 4px solid #999;
+  border-radius: 8px;
+  transition: .3s; }
 
-.hamb-line {
-  box-sizing: border-box;
-  position: fixed;
-  height: 3px;
-  width: 100%;
-  background-color: #444;
-  transition: .25s; }
-
-.hor {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  position: relative;
-  float: left;
-  margin-top: 3px; }
-
-.dia.p-1 {
-  position: relative;
-  box-sizing: border-box;
-  float: left;
-  transition: all .25s; }
-
-.dia.p-2 {
-  box-sizing: border-box;
-  position: relative;
-  float: left;
-  margin-top: 3px;
-  transition: all .25s; }
-
-input[type=checkbox]:checked ~ .menuIconToggle > .hor {
-  box-sizing: border-box;
-  opacity: 0;
-  transition: all .25s; }
-
-input[type=checkbox]:checked ~ .menuIconToggle > .dia.p-1 {
-  box-sizing: border-box;
-  transform: rotate(135deg);
-  margin-top: 8px;
-  transition: all .25s; }
-
-input[type=checkbox]:checked ~ .menuIconToggle > .dia.p-2 {
-  box-sizing: border-box;
-  transform: rotate(-135deg);
-  margin-top: -9px;
-  transition: all .25s; }
+.menuIconToggle:hover {
+  border-color: Orange; }
 
 @media screen and (max-width: 640px) {
   nav {
@@ -238,39 +221,41 @@ nav li > a:hover {
 
 .cards {
   margin: 2vh 5% 5vh; }
-
-.cards h4 {
-  font-size: 2.25em;
-  font-family: 'Montserrat';
-  color: orange;
-  margin-bottom: .45em;
-  white-space: nowrap;
-  font-weight: bold;
-  text-align: left;
-  letter-spacing: -.075em; }
-
-.cards .card {
-  display: inline-block;
-  width: 32.5%; }
-
-.service-pic {
-  display: inline-block;
-  margin: 1em auto .55em;
-  border-radius: 50%;
-  background: #eee;
-  width: 150px;
-  height: 150px;
-  line-height: 150px;
-  display: none; }
+  .cards h4 {
+    font-size: 2.25em;
+    font-family: 'Montserrat';
+    color: orange;
+    margin-bottom: .45em;
+    white-space: nowrap;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: -.075em; }
+  .cards .card {
+    display: inline-block;
+    width: 32.5%; }
+  .cards li {
+    border-bottom: 1px solid #999;
+    padding: .2em 0; }
+  .cards .service-pic {
+    display: inline-block;
+    margin: 1em auto .55em;
+    border-radius: 50%;
+    background: #eee;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    display: none; }
 
 .button-1 {
   font-size: 1em;
+  margin: 0;
   padding: .5em 1em;
-  background: transparent;
-  border: 2px solid orange;
-  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border: 0;
   cursor: pointer;
-  color: Orange; }
+  color: black;
+  font-weight: bold; }
 
 .button-2 {
   font-size: 1em;
@@ -280,30 +265,35 @@ nav li > a:hover {
   background: rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   cursor: pointer;
-  color: black; }
+  color: black;
+  font-weight: bold; }
 
 .button-1:hover {
-  background: PeachPuff; }
-
-.insta-picture1 {
-  position: absolute;
-  display: inline-block;
-  min-width: 350px;
-  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.25);
-  top: 50px;
-  left: 50px; }
+  background: rgba(0, 0, 0, 0.15); }
 
 .about-us {
-  position: relative;
-  background: orange;
-  color: Black;
-  padding: 5vh 5% 5vh 40%;
-  right: 0;
+  background: Orange;
   display: flex;
-  align-items: justify; }
-
-.about-us h2 {
-  font-size: 2.8em; }
+  align-content: justify;
+  flex-wrap: wrap; }
+  .about-us .col2-1 {
+    display: inline-block;
+    min-width: 280px;
+    width: 30%;
+    padding: 11vh 5% 9vh; }
+    .about-us .col2-1 .insta-widget {
+      box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 3px; }
+  .about-us .col2-2 {
+    display: inline-block;
+    width: 54%;
+    min-width: 280px;
+    padding: 5vh 0 5vh; }
+    .about-us .col2-2 p {
+      margin-bottom: 1em;
+      font-size: .7em; }
+    .about-us .col2-2 h2 {
+      font-size: 2.8em; }
 
 .centered {
   text-align: center; }
@@ -453,42 +443,35 @@ footer {
   left: 0;
   background: #eee;
   width: 100px; }
-
-.soc-net h3 {
-  display: none; }
-
-.soc-net li > a {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  margin: 0;
-  padding: 20px;
-  transition: .2s; }
-
-.soc-net li > a > i {
-  display: none; }
-
-.soc-net .facebook {
-  background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/facebook-img128x128.png") no-repeat center #1877F2;
-  background-size: 60px; }
-
-.facebook svg {
-  filter: invert(99%) sepia(99%) saturate(24%) hue-rotate(359deg) brightness(106%) contrast(100%); }
-
-.soc-net .instagram {
-  background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/instagram-img128x128.png") no-repeat center;
-  background-color: #f09433;
-  background-color: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  background-color: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  background-color: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1);
-  background-size: 60px; }
-
-.soc-net .twitter {
-  background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/twitter-img128x128.png") no-repeat center #1D9BF0;
-  color: White;
-  background-size: 60px; }
+  .soc-net h3 {
+    display: none; }
+  .soc-net a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0;
+    padding: 20px;
+    transition: .2s; }
+  .soc-net i {
+    display: none; }
+  .soc-net .facebook {
+    background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/facebook-img128x128.png") no-repeat center #1877F2;
+    background-size: 60px; }
+  .soc-net .facebook svg {
+    filter: invert(99%) sepia(99%) saturate(24%) hue-rotate(359deg) brightness(106%) contrast(100%); }
+  .soc-net .instagram {
+    background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/instagram-img128x128.png") no-repeat center;
+    background-color: #f09433;
+    background-color: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background-color: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background-color: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1);
+    background-size: 60px; }
+  .soc-net .twitter {
+    background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/twitter-img128x128.png") no-repeat center #1D9BF0;
+    color: White;
+    background-size: 60px; }
 
 .contact-form {
   margin: 5% auto 20vh;
@@ -500,19 +483,6 @@ footer {
 
 .notice small {
   font-size: .55em; }
-
-.partners li {
-  width: 15%;
-  text-align: center;
-  margin: 1em 0; }
-
-.partners li img {
-  border: 1px dotted #999;
-  height: 100px;
-  display: block;
-  font-size: .5em;
-  color: #999;
-  border-radius: 10px; }
 
 .contacts {
   margin: 0 auto 2em;
@@ -530,9 +500,11 @@ footer {
 .cols3-3 {
   text-align: right; }
 
-.testimonials {
-  margin: 2em 0;
-  clear: both; }
+#testimonials {
+  padding: 9vh 0 10vh;
+  background: Khaki; }
+  #testimonials h2 {
+    margin: 0 5% .6em; }
 
 .slider {
   width: 100%;
@@ -586,7 +558,7 @@ footer {
 section {
   z-index: 1; }
 
-section .group {
+.group {
   width: 100vw;
   display: -webkit- flex;
   display: flex;
@@ -597,31 +569,27 @@ section .group {
   -webkit-justify-content: space-evenly;
   justify-content: space-evenly;
   overflow: hidden; }
-
-section .group .row {
-  width: 6000px;
-  display: -webkit- flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-  transform: translate3d(25%, 0, 0);
-  white-space: nowrap;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-name: ticker;
-  animation-duration: 60s; }
-
-section .group .row:nth-child(even) {
-  animation-direction: reverse; }
-
-section .group .row h2 {
-  color: Orange;
-  font-size: 1.8em;
-  opacity: .5; }
+  .group .row {
+    width: 6000px;
+    display: -webkit- flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    transform: translate3d(25%, 0, 0);
+    white-space: nowrap;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker;
+    animation-duration: 60s; }
+    .group .row h2 {
+      font-size: 1.8em;
+      color: LightSalmon; }
+  .group .row:nth-child(even) {
+    animation-direction: reverse; }
 
 .contacts li {
   white-space: nowrap;
@@ -652,3 +620,25 @@ section .group .row h2 {
 .top-notice {
   text-align: center;
   background: LightYellow; }
+
+header a, .cta a, footer a {
+  text-decoration: none; }
+
+h1, header h2, label a, nav, h2, h3, h4, .button-1, .rating, .insta-picture1, .twitter-timeline, .contact-form, input, textarea, .contacts {
+  user-select: none; }
+
+#partners {
+  background: #eee;
+  padding: 10vh 5%; }
+  #partners li {
+    width: 15%;
+    text-align: center;
+    margin: 1em 0; }
+    #partners li img {
+      border: 1px dotted #999;
+      height: 100px;
+      display: block;
+      font-size: .5em;
+      color: #999;
+      border-radius: 10px; }
+
