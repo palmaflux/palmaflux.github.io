@@ -421,39 +421,44 @@ input[type='submit']:hover {
 .soc-net {
   position: absolute;
   top: 40%;
-  left: 0;
-  width: 80px; }
+  left: 0; }
   .soc-net h3 {
     display: none; }
-  .soc-net a {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    margin: 0;
+  .soc-net li {
+    display: block;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     transition: all .2s; }
-  .soc-net :hover {
-    width: 100px;
-    background-size: 60px; }
+  .soc-net a {
+    display: block;
+    width: 80px;
+    height: 80px; }
   .soc-net i {
     display: none; }
   .soc-net .facebook {
     background-color: #1778F2; }
     .soc-net .facebook a {
-      background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/facebook-img128x128.png") no-repeat center;
+      background: url("https://raw.githubusercontent.com/palmaflux/palmaflux.github.io/main/images/logo_facebook.png") no-repeat center;
       background-size: 50px;
-      filter: invert(100%); }
+      filter: brightness(0) invert(1); }
   .soc-net .instagram {
-    background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/instagram-img128x128.png") no-repeat center Purple;
-    background-size: 50px;
-    filter: invert(47%) sepia(41%) saturate(2666%) hue-rotate(161deg) brightness(94%) contrast(101%); }
+    background-color: #eee; }
+    .soc-net .instagram a {
+      background: url("https://raw.githubusercontent.com/palmaflux/palmaflux.github.io/main/images/logo_instagram.png") no-repeat center;
+      background-size: 50px; }
   .soc-net .twitter {
-    background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/twitter-img128x128.png") no-repeat center #1D9BF0;
-    color: White;
-    background-size: 50px; }
+    background-color: #1D9BF0; }
+    .soc-net .twitter a {
+      background: url("https://raw.githubusercontent.com/palmaflux/palmaflux.github.io/main/images/logo_twitter.png") no-repeat center;
+      filter: brightness(0) invert(1);
+      background-size: 50px; }
   .soc-net .linkedin {
-    background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/linkedin-img128x128.png") no-repeat center #ddd;
-    color: White;
-    background-size: 50px; }
+    background-color: #ddd; }
+    .soc-net .linkedin a {
+      background: url("https://raw.githubusercontent.com/palmaflux/palmaflux.github.io/main/images/logo_linkedin.png") no-repeat center;
+      background-size: 50px; }
+
+.soc-net a:hover {
+  background-size: 60px; }
 
 .contact-form {
   margin: 15vh auto 10vh;
@@ -611,13 +616,13 @@ h1, header h2, label a, nav, h2, h3, h4, .button-1, .rating, .insta-picture1, .t
 #partners {
   background: #eee;
   padding: 10vh 5%; }
+  #partners ul {
+    margin-top: 8vh; }
   #partners li {
-    width: 15%;
-    text-align: center;
-    margin: 1em 0; }
+    width: 19%;
+    text-align: center; }
     #partners li img {
-      border: 1px dotted #999;
-      height: 100px;
+      height: 124px;
       display: block;
       font-size: .5em;
       color: #999;
