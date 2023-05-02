@@ -1,15 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Rock+Salt&display=swap");
 * {
-  box-sizing: content-box; 
-user-select: text; }
-
-body {
-  font-family: sans-serif;
-  font-size: 2.5rem;
-  line-height: 1.35;
-  cursor: default;
-  padding: 0;@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Rock+Salt&display=swap");
-}
+  box-sizing: content-box;
+  user-select: text; }
 
 html {
   scroll-behavior: smooth; }
@@ -46,8 +38,9 @@ header, main, footer {
   margin: 0 auto; }
 
 footer {
+  background: MediumVioletRed;
+  color: HotPink;
   padding: 5%;
-  color: Black;
   font-size: 80%; }
 
 section h2 {
@@ -302,49 +295,36 @@ nav li > a:hover {
 
 .sticky {
   position: relative;
+  padding: 2%;
   background-color: #ffdb72;
-  display: inline-block; }
-
-.sticky:hover {
-  background-color: #ffd65e; }
-
-.sticky input, .sticky textarea {
-  border: 0px;
-  padding: .2em 0;
-  min-width: 200px;
-  max-height: 400px;
-  background-color: transparent;
-  font-family: 'Rock Salt', cursive;
-  color: #2d2d2d;
-  font-size: 1em;
-  line-height: 1.4;
-  outline: none;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.15); }
-
-.sticky:before {
-  z-index: -1;
-  position: absolute;
-  content: '';
-  bottom: 20px;
-  left: 12px;
-  width: 50%;
-  top: 80%;
-  max-width: 300px;
-  background: transparent;
-  box-shadow: 0px 20px 12px rgba(0, 0, 0, 0.35);
-  transform: rotate(-4deg); }
-
-.sticky::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: transparent; }
-
-.sticky::-webkit-scrollbar {
-  width: 10px;
-  background-color: #F5F5F5; }
-
-.sticky::-webkit-scrollbar-thumb {
-  background-color: transparent;
-  border: 0px; }
+  /* :hover
+    background-color: #ffd65e */ }
+  .sticky input, .sticky textarea {
+    display: block;
+    width: 100%;
+    border: 0px;
+    padding: .2em 0;
+    min-width: 200px;
+    max-height: 400px;
+    background-color: transparent;
+    font-family: 'Rock Salt', cursive;
+    color: #2d2d2d;
+    font-size: .85em;
+    line-height: 1.4;
+    outline: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15); }
+  .sticky :before {
+    z-index: -1;
+    position: absolute;
+    content: '';
+    bottom: 20px;
+    left: 12px;
+    width: 50%;
+    top: 80%;
+    max-width: 300px;
+    background: transparent;
+    box-shadow: 0px 20px 12px rgba(0, 0, 0, 0.35);
+    transform: rotate(-4deg); }
 
 ::-webkit-input-placeholder {
   color: #2d2d2d; }
@@ -358,15 +338,22 @@ nav li > a:hover {
 :-moz-placeholder {
   color: #2d2d2d; }
 
-.sticky input[type='submit'] {
+input[type='submit'] {
   font-family: 'Arial', sans-serif;
   text-transform: uppercase;
   font-weight: bolder;
   font-size: 1.2em;
   letter-spacing: .05em;
+  -webkit-text-stroke: 2px black;
+  color: transparent;
   margin-top: .5em;
   border: 0;
+  opacity: .5;
   cursor: pointer; }
+
+input[type='submit']:hover {
+  opacity: 1;
+  color: #2d2d2d; }
 
 .plan {
   display: block;
@@ -418,10 +405,6 @@ nav li > a:hover {
   filter: invert(37%) sepia(81%) saturate(806%) hue-rotate(156deg) brightness(113%) contrast(101%);
   font-style: normal; }
 
-footer {
-  background: Pink;
-  color: #eee; }
-
 .col1, .col2 {
   display: inline-block;
   width: 50%;
@@ -436,56 +419,55 @@ footer {
   font-size: 2.3em; }
 
 .soc-net {
-  text-align: left;
   position: absolute;
-  top: 32%;
+  top: 40%;
   left: 0;
-  background: #eee;
-  width: 100px; }
+  width: 80px; }
   .soc-net h3 {
     display: none; }
   .soc-net a {
     display: inline-block;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
+    width: 80px;
+    height: 80px;
     margin: 0;
-    padding: 20px;
-    transition: .2s; }
+    transition: all .2s; }
+  .soc-net :hover {
+    width: 100px;
+    background-size: 60px; }
   .soc-net i {
     display: none; }
   .soc-net .facebook {
-    background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/facebook-img128x128.png") no-repeat center #1877F2;
-    background-size: 60px; }
-  .soc-net .facebook svg {
-    filter: invert(99%) sepia(99%) saturate(24%) hue-rotate(359deg) brightness(106%) contrast(100%); }
+    background-color: #1778F2; }
+    .soc-net .facebook a {
+      background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/facebook-img128x128.png") no-repeat center;
+      background-size: 50px;
+      filter: invert(100%); }
   .soc-net .instagram {
-    background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/instagram-img128x128.png") no-repeat center;
-    background-color: #f09433;
-    background-color: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background-color: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background-color: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1);
-    background-size: 60px; }
+    background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/instagram-img128x128.png") no-repeat center Purple;
+    background-size: 50px;
+    filter: invert(47%) sepia(41%) saturate(2666%) hue-rotate(161deg) brightness(94%) contrast(101%); }
   .soc-net .twitter {
     background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/twitter-img128x128.png") no-repeat center #1D9BF0;
     color: White;
-    background-size: 60px; }
+    background-size: 50px; }
+  .soc-net .linkedin {
+    background: url("https://raw.githubusercontent.com/dvhuubt/huubt/main/repo/img/linkedin-img128x128.png") no-repeat center #ddd;
+    color: White;
+    background-size: 50px; }
 
 .contact-form {
-  margin: 5% auto 20vh;
-  padding: 2.5%;
-  max-width: 600px; }
+  margin: 15vh auto 10vh;
+  padding: 5% 5% 3.5%;
+  max-width: 510px;
+  transition: 1s; }
 
+/*  :hover
+    transform: rotate(-.8deg)
+  */
 .notice {
   margin: 0; }
-
-.notice small {
-  font-size: .55em; }
-
-.contacts {
-  margin: 0 auto 2em;
-  clear: both; }
+  .notice small {
+    font-size: .55em; }
 
 .cols3 li {
   min-width: 32%; }
@@ -531,22 +513,19 @@ footer {
   width: 25%;
   cursor: pointer;
   margin-right: .1em; }
+  .review-card h4 {
+    font-weight: bold;
+    margin: 0; }
+  .review-card .rating {
+    letter-spacing: .25em;
+    font-size: .5em;
+    margin: 0;
+    padding: 0; }
+  .review-card p {
+    font-size: .65em; }
 
-.review-card:hover {
+:hover {
   border-color: #888; }
-
-.review-card h4 {
-  font-weight: bold;
-  margin: 0; }
-
-.rating {
-  letter-spacing: .25em;
-  font-size: .5em;
-  margin: 0;
-  padding: 0; }
-
-.review-card p {
-  font-size: .65em; }
 
 @keyframes ticker {
   0% {
@@ -590,16 +569,19 @@ section {
   .group .row:nth-child(even) {
     animation-direction: reverse; }
 
-.contacts li {
-  white-space: nowrap;
-  color: Black; }
-
-.contacts a {
-  color: maroon; }
-
-.contacts svg {
-  height: 1em;
-  margin-bottom: -.1em; }
+.contacts {
+  margin: 0 auto 2em; }
+  .contacts li {
+    white-space: nowrap;
+    color: LightYellow; }
+  .contacts a {
+    font-weight: bolder;
+    color: LightPink; }
+  .contacts :hover {
+    color: white; }
+  .contacts svg {
+    height: 1em;
+    margin-bottom: -.175em; }
 
 .slick-prev, .slick-next {
   display: none;
@@ -640,4 +622,3 @@ h1, header h2, label a, nav, h2, h3, h4, .button-1, .rating, .insta-picture1, .t
       font-size: .5em;
       color: #999;
       border-radius: 10px; }
-
