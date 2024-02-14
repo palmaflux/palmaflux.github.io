@@ -1,0 +1,25 @@
+body {
+  font: 1.2em Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh
+}
+
+main {
+  text-align: center
+}
+
+h1 {
+  display: none
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000
+}
+
+p {
+  font-size: 4.25em
+}
